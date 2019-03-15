@@ -1,0 +1,55 @@
+<div class="blade-content">
+    <div class="blade-content">
+        <div class="blade-inner">
+            <div class="inner-block">
+                <form name="importWizardForm" class="form">
+                    <fieldset>
+                        <div class="form-group">
+                            <label class="form-label">{{ 'customer.blades.organization-workflow.labels.upload-progress' | translate }}</label>
+                            <div class="form-input">
+                                <input type="file" uploader="uploader" nv-file-select style="z-index: 0;" tabindex="-1">
+                                <input type="text" readonly="" ng-model="fileUrl">
+                                <button class="btn __file" type="button" onclick="$('input[type=file]').trigger('click')">
+                                    <i class="btn-ico fa fa-image"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn __disabled" ng-click="uploadWorkflow()">
+                                {{ 'customer.blades.organization-workflow.labels.import' | translate }}
+                            </button>
+                        </div>
+                        <div ng-show="uploader.isUploading">
+                            <div class="sub-t">{{ 'customer.blades.organization-workflow.labels.upload-progress' | translate }}</div>
+                            <div class="progress-bar __aqua" ng-style="{'width': uploader.progress + '%'}" style="width: 0%;"></div>
+                        </div>
+                    </fieldset>
+                </form>
+                <div class="padding-bottom-sm clearFix" ng-if="fileName">
+                    <div class="column half-width">
+                        <div class="title-sm">{{ 'customer.blades.organization-workflow.labels.workflow-file' | translate }}</div>
+                        <div>{{ fileName }}</div>
+                    </div>
+                    <div class="column half-width">
+                        <div class="title-sm">{{ 'customer.blades.organization-workflow.labels.upload-date' | translate }}</div>
+                        <div>{{ }}</div>
+                    </div>
+                </div>
+                <div class="msg-warning">
+                    <p>{{ 'customer.blades.organization-workflow.messages.warning' | translate }}</p>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">{{ 'customer.blades.organization-workflow.labels.enabled' | translate }}</label>
+                    <div>
+                        <div id="valuePlaceHolder">
+                            <label class="form-label __switch" ng-class="{ '__disabled' :  !hasWorkflow }">
+                                <input type="checkbox" ng-model="blade.enabledWorkFlow" ng-checked="blade.enabledWorkFlow" ng-disabled="!hasWorkflow">
+                                <span class="switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -147,6 +147,22 @@
         "placeholders": {
           "phone": "Telefonnummer eingeben"
         }
+      },
+      "organization-workflow": {
+        "title": "Import workflow from json",
+        "labels": {
+          "import": "Start import",
+          "workflow-file": "Workflow file",
+          "upload-date": "Upload date",
+          "upload-progress": "Upload progress",
+          "upload-json-file": "Upload Json file",
+          "enabled": "Enabled"
+        },
+        "messages": {
+          "warning": "New workflow will override old workflow.",
+          "success": "Uploaded workflow successfully.",
+          "error": "Workflow uploading failed."
+        }
       }
     },
     "widgets": {
@@ -165,6 +181,10 @@
       "customer-accounts-list": {
         "title": "Konten",
         "blade-subtitle": "Kunden Konten verwalten"
+      },
+      "organization-workflow": {
+        "title": "Workflow",
+        "blade-subtitle": "Import workflow from json"
       }
     },
     "dialogs": {

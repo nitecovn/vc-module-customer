@@ -1,178 +1,198 @@
-﻿{
+{
     "customer": {
         "main-menu-title": "Contacts",
-        "blades": {
-            "contact-detail": {
-                "title-new": "New Customer",
-                "subtitle": "Customer details",
-                "labels": {
-                    "first-name": "First name",
-                    "middle-name": "Middle name",
-                    "last-name": "Last name",
-                    "groups": "User groups",
-                    "full-name": "Full name",
-                    "birthday": "Birthday",
-                    "salutation": "Salutation",
-                    "defaultLanguage": "Default language",
-                    "organizations": "Organization(s)",
-                    "taxpayerId": "Taxpayer ID",
-                    "preferred-communication": "Preferred communication",
-                    "preferred-delivery": "Preferred delivery",
-                    "timezone": "Time zone"
-                },
-                "placeholders": {
-                    "groups": "Select user groups",
-                    "first-name": "Enter value",
-                    "middle-name": "Enter value",
-                    "last-name": "Enter value",
-                    "full-name": "Enter value",
-                    "birthday": "Enter value",
-                    "salutation": "Enter value",
-                    "defaultLanguage": "Enter value",
-                    "preferred-communication": "Enter value",
-                    "preferred-delivery": "Enter value",
-                    "taxpayerId": "Enter value",
-                    "organizations": "Select organization",
-                    "timezone": "Select value"
-                }
-            },
-            "employee-detail": {
-                "title-new": "New Employee",
-                "subtitle": "Employee details",
-                "labels": {
-                    "is-active": "Is active",
-                    "first-name": "First name",
-                    "middle-name": "Middle name",
-                    "last-name": "Last name",
-                    "full-name": "Full name",
-                    "type": "Employee type",
-                    "birthday": "Birthday",
-                    "photo-url": "Photo URL",
-                    "defaultLanguage": "Default language",
-                    "organizations": "Organization(s)",
-                    "timezone": "Time zone"
-                },
-                "placeholders": {
-                    "first-name": "Enter value",
-                    "middle-name": "Enter value",
-                    "last-name": "Enter value",
-                    "full-name": "Enter value",
-                    "type": "Enter value",
-                    "birthday": "Enter value",
-                    "photo-url": "Enter URL",
-                    "defaultLanguage": "Enter value",
-                    "organizations": "Select organization",
-                    "timezone": "Select value"
-                }
-            },
-            "pick-store-list": {
-                "title": "New Account",
-                "subtitle": "Select a store for the new Account",
-                "labels": {
-                    "name": "Store name"
-                }
-            },
-            "organization-detail": {
-                "title-new": "New Organization",
-                "subtitle": "Organization details",
-                "labels": {
-                    "name": "Name",
-                    "description": "Description",
-                    "business-category": "Business category"
-                },
-                "placeholders": {
-                    "name": "Enter name",
-                    "description": "Enter description"
-                }
-            },
-            "vendor-detail": {
-                "title-new": "New Vendor",
-                "subtitle": "Vendor details",
-                "labels": {
-                    "name": "Name",
-                    "site-url": "Site URL",
-                    "logo-url": "Logo URL",
-                    "group-name": "Group name",
-                    "description": "Description"
-                },
-                "placeholders": {
-                    "name": "Enter name",
-                    "site-url": "Enter URL",
-                    "logo-url": "Enter URL",
-                    "group-name": "Enter value",
-                    "description": "Enter description"
-                }
-            },
-            "member-add": {
-                "title": "New contact",
-                "subtitle": "Select contact type",
-                "organization": {
-                    "description": "A container for other Organizations and Customers."
-                },
-                "employee": {
-                    "description": "The Organization Employee."
-                },
-                "contact": {
-                    "description": "The shop Customer. Can belong to Organizations or represent an individual shopper."
-                },
-                "vendor": {
-                    "description": "The shop Vendor."
-                }
-            },
-            "member-emails-list": {
-                "labels": {
-                    "no-emails": "No emails yet",
-                    "name": "Name",
-                    "address": "Address",
-                    "Email": "Email"
-                },
-                "placeholders": {
-                    "email": "Enter value"
-                }
-            },
-            "member-list": {
-                "title": "Organizations & Contacts",
-                "subtitle": "Browsing '{{name}}'",
-                "labels": {
-                    "type": "Type",
-                    "name": "Name",
-                    "address": "Address",
-                    "email": "Email"
-                }
-            },
-            "member-phones-list": {
-                "labels": {
-                    "no-phones": "No phones yet"
-                },
-                "placeholders": {
-                    "phone": "Enter phone number"
-                }
-            },
-            "customer-accounts-list": {
-                "commands": {
-                    "link": "Link account",
-                    "unlink": "Unlink account"
-                }
-            }
+      "blades": {
+        "contact-detail": {
+          "title-new": "New Customer",
+          "subtitle": "Customer details",
+          "labels": {
+            "first-name": "First name",
+            "middle-name": "Middle name",
+            "last-name": "Last name",
+            "groups": "User groups",
+            "full-name": "Full name",
+            "birthday": "Birthday",
+            "salutation": "Salutation",
+            "defaultLanguage": "Default language",
+            "organizations": "Organization(s)",
+            "taxpayerId": "Taxpayer ID",
+            "preferred-communication": "Preferred communication",
+            "preferred-delivery": "Preferred delivery",
+            "timezone": "Time zone"
+          },
+          "placeholders": {
+            "groups": "Select user groups",
+            "first-name": "Enter value",
+            "middle-name": "Enter value",
+            "last-name": "Enter value",
+            "full-name": "Enter value",
+            "birthday": "Enter value",
+            "salutation": "Enter value",
+            "defaultLanguage": "Enter value",
+            "preferred-communication": "Enter value",
+            "preferred-delivery": "Enter value",
+            "taxpayerId": "Enter value",
+            "organizations": "Select organization",
+            "timezone": "Select value"
+          }
         },
-        "widgets": {
-            "address-list": {
-                "title": "Addresses",
-                "blade-subtitle": "Manage addresses"
-            },
-            "member-emails-list": {
-                "title": "Emails",
-                "blade-subtitle": "Manage emails"
-            },
-            "member-phones-list": {
-                "title": "Phones",
-                "blade-subtitle": "Manage phones"
-            },
-            "customer-accounts-list": {
-                "title": "Accounts",
-                "blade-subtitle": "Manage customer accounts"
-            }
+        "employee-detail": {
+          "title-new": "New Employee",
+          "subtitle": "Employee details",
+          "labels": {
+            "is-active": "Is active",
+            "first-name": "First name",
+            "middle-name": "Middle name",
+            "last-name": "Last name",
+            "full-name": "Full name",
+            "type": "Employee type",
+            "birthday": "Birthday",
+            "photo-url": "Photo URL",
+            "defaultLanguage": "Default language",
+            "organizations": "Organization(s)",
+            "timezone": "Time zone"
+          },
+          "placeholders": {
+            "first-name": "Enter value",
+            "middle-name": "Enter value",
+            "last-name": "Enter value",
+            "full-name": "Enter value",
+            "type": "Enter value",
+            "birthday": "Enter value",
+            "photo-url": "Enter URL",
+            "defaultLanguage": "Enter value",
+            "organizations": "Select organization",
+            "timezone": "Select value"
+          }
         },
+        "pick-store-list": {
+          "title": "New Account",
+          "subtitle": "Select a store for the new Account",
+          "labels": {
+            "name": "Store name"
+          }
+        },
+        "organization-detail": {
+          "title-new": "New Organization",
+          "subtitle": "Organization details",
+          "labels": {
+            "name": "Name",
+            "description": "Description",
+            "business-category": "Business category"
+          },
+          "placeholders": {
+            "name": "Enter name",
+            "description": "Enter description"
+          }
+        },
+        "vendor-detail": {
+          "title-new": "New Vendor",
+          "subtitle": "Vendor details",
+          "labels": {
+            "name": "Name",
+            "site-url": "Site URL",
+            "logo-url": "Logo URL",
+            "group-name": "Group name",
+            "description": "Description"
+          },
+          "placeholders": {
+            "name": "Enter name",
+            "site-url": "Enter URL",
+            "logo-url": "Enter URL",
+            "group-name": "Enter value",
+            "description": "Enter description"
+          }
+        },
+        "member-add": {
+          "title": "New contact",
+          "subtitle": "Select contact type",
+          "organization": {
+            "description": "A container for other Organizations and Customers."
+          },
+          "employee": {
+            "description": "The Organization Employee."
+          },
+          "contact": {
+            "description": "The shop Customer. Can belong to Organizations or represent an individual shopper."
+          },
+          "vendor": {
+            "description": "The shop Vendor."
+          }
+        },
+        "member-emails-list": {
+          "labels": {
+            "no-emails": "No emails yet",
+            "name": "Name",
+            "address": "Address",
+            "Email": "Email"
+          },
+          "placeholders": {
+            "email": "Enter value"
+          }
+        },
+        "member-list": {
+          "title": "Organizations & Contacts",
+          "subtitle": "Browsing '{{name}}'",
+          "labels": {
+            "type": "Type",
+            "name": "Name",
+            "address": "Address",
+            "email": "Email"
+          }
+        },
+        "member-phones-list": {
+          "labels": {
+            "no-phones": "No phones yet"
+          },
+          "placeholders": {
+            "phone": "Enter phone number"
+          }
+        },
+        "customer-accounts-list": {
+          "commands": {
+            "link": "Link account",
+            "unlink": "Unlink account"
+          }
+        },
+        "organization-workflow": {
+          "title": "Import workflow from json",
+          "labels": {
+            "import": "Start import",
+            "workflow-file": "Workflow file",
+            "upload-date": "Upload date",
+            "upload-progress": "Upload progress",
+            "upload-json-file": "Upload Json file",
+            "enabled": "Enabled"
+          },
+          "messages": {
+            "warning": "New workflow will override old workflow.",
+            "success": "Uploaded workflow successfully.",
+            "error": "Workflow uploading failed."
+          }
+        }
+      },
+      "widgets": {
+        "address-list": {
+          "title": "Addresses",
+          "blade-subtitle": "Manage addresses"
+        },
+        "member-emails-list": {
+          "title": "Emails",
+          "blade-subtitle": "Manage emails"
+        },
+        "member-phones-list": {
+          "title": "Phones",
+          "blade-subtitle": "Manage phones"
+        },
+        "customer-accounts-list": {
+          "title": "Accounts",
+          "blade-subtitle": "Manage customer accounts"
+        },
+        "organization-workflow": {
+          "title": "Workflow",
+          "blade-subtitle": "Import workflow from json"
+        }
+      },
         "dialogs": {
             "members-delete": {
                 "title": "Delete confirmation",

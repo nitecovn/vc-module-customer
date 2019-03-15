@@ -15,4 +15,12 @@
                 isArray: true
             }
         });
+}])
+.factory('virtoCommerce.customerModule.workflows', ['$resource', function ($resource) {
+    return $resource('api/organizationWorkflow/:id', {},
+        {
+            search: { method: 'POST', url: 'api/organizationWorkflow/search' },
+            updateStatus: { method: 'POST' },
+            updateFile: { method: 'POST', url: 'api/organizationWorkflow/import' }
+        });
 }]);
