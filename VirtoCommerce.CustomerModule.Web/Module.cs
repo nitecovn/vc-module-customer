@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Web.Http;
 using Microsoft.Practices.Unity;
+using VirtoCommerce.CustomerModule.Core.Services;
 using VirtoCommerce.CustomerModule.Data.Handlers;
 using VirtoCommerce.CustomerModule.Data.Model;
 using VirtoCommerce.CustomerModule.Data.Repositories;
@@ -64,6 +65,7 @@ namespace VirtoCommerce.CustomerModule.Web
                 new ChangeLogInterceptor(_container.Resolve<Func<IPlatformRepository>>(), ChangeLogPolicy.Cumulative, new[] { nameof(MemberDataEntity) }));
 
             _container.RegisterInstance<Func<ICustomerRepository>>(customerRepositoryFactory);
+            _container.RegisterInstance<Func<IOrganizationWorkflowRepository>>(customerRepositoryFactory);
             _container.RegisterInstance<Func<IMemberRepository>>(customerRepositoryFactory);
 
             _container.RegisterType<IMemberService, CommerceMembersServiceImpl>();
@@ -71,6 +73,7 @@ namespace VirtoCommerce.CustomerModule.Web
             // Indexed search
             _container.RegisterType<ISearchRequestBuilder, MemberSearchRequestBuilder>(nameof(MemberSearchRequestBuilder));
             _container.RegisterType<IMemberSearchService, MemberSearchServiceDecorator>();
+            _container.RegisterType<IImportWorkflowService, ImportWorkflowService>();
         }
 
         public override void PostInitialize()

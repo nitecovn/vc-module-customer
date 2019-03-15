@@ -1,13 +1,16 @@
+using System;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 using VirtoCommerce.CustomerModule.Data.Model;
 using VirtoCommerce.Platform.Core.Common;
 using VirtoCommerce.Platform.Data.Infrastructure.Interceptors;
 
 namespace VirtoCommerce.CustomerModule.Data.Repositories
 {
-    public class CustomerRepositoryImpl : MemberRepositoryBase, ICustomerRepository
+    public class CustomerRepositoryImpl : MemberRepositoryBase, ICustomerRepository, IOrganizationWorkflowRepository
     {
         public CustomerRepositoryImpl()
         {
@@ -54,6 +57,10 @@ namespace VirtoCommerce.CustomerModule.Data.Repositories
 
             #endregion
 
+            #region OrganizationWorkflow
+            modelBuilder.Entity<OrganizationWorkflowEntity>().ToTable("OrganizationWorkflow").HasKey(x => x.Id).Property(x => x.Id);
+            #endregion
+
             base.OnModelCreating(modelBuilder);
         }
 
@@ -79,6 +86,34 @@ namespace VirtoCommerce.CustomerModule.Data.Repositories
             get { return GetAsQueryable<VendorDataEntity>(); }
         }
         #endregion
+
+        #region IOrganizationWorkflowRepository
+        public IQueryable<OrganizationWorkflowEntity> OrganizationWorkflows => GetAsQueryable<OrganizationWorkflowEntity>();
+
+        public Task<OrganizationWorkflowEntity[]> GetByOrganizationIdAsync(string organizationId)
+        {
+            return OrganizationWorkflows.Where(x => x.OrganizationId == organizationId).ToArrayAsync();
+        }
+        public void Add(OrganizationWorkflowEntity entity)
+        {
+            Add<OrganizationWorkflowEntity>(entity);
+        }
+        public async Task UpdateAsync(OrganizationWorkflowEntity entity)
+        {
+            var organizationWorkflows = await OrganizationWorkflows.Where(x => x.OrganizationId == entity.OrganizationId).ToArrayAsync();
+            var organizationWorkflow = organizationWorkflows.FirstOrDefault();
+            if (organizationWorkflow != null)
+            {
+                Update<OrganizationWorkflowEntity>(entity);
+            }
+        }
+        public OrganizationWorkflowEntity[] Search(Expression<Func<OrganizationWorkflowEntity, bool>> filter)
+        {
+            return LinqKit.Extensions.AsExpandable(OrganizationWorkflows).Where(filter).ToArray();
+
+        }
+        #endregion
+
     }
 
 }

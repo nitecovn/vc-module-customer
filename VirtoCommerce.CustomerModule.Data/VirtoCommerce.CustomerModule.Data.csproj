@@ -148,9 +148,14 @@
     <Compile Include="Migrations\201805071501368_RemoveAddressNameRequired.Designer.cs">
       <DependentUpon>201805071501368_RemoveAddressNameRequired.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903150708411_CreateOrganizationWorkflow.cs" />
+    <Compile Include="Migrations\201903150708411_CreateOrganizationWorkflow.Designer.cs">
+      <DependentUpon>201903150708411_CreateOrganizationWorkflow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\AddressDataEntity.cs" />
     <Compile Include="Model\ContactDataEntity.cs" />
+    <Compile Include="Model\OrganizationWorkflowEntity.cs" />
     <Compile Include="Model\EmailDataEntity.cs" />
     <Compile Include="Model\EmployeeDataEntity.cs" />
     <Compile Include="Model\MemberDataEntity.cs" />
@@ -165,6 +170,8 @@
     <Compile Include="Repositories\CustomerRepositoryImpl.cs" />
     <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Repositories\IMemberRepository.cs" />
+    <Compile Include="Services\ImportWorkflowService.cs" />
+    <Compile Include="Repositories\IOrganizationWorkflowRepository.cs" />
     <Compile Include="Repositories\MemberRepositoryBase.cs" />
     <Compile Include="Resources\MemberResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -234,10 +241,19 @@
     <EmbeddedResource Include="Migrations\201805071501368_RemoveAddressNameRequired.resx">
       <DependentUpon>201805071501368_RemoveAddressNameRequired.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903150708411_CreateOrganizationWorkflow.resx">
+      <DependentUpon>201903150708411_CreateOrganizationWorkflow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\MemberResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>MemberResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VirtoCommerce.CustomerModule.Core\VirtoCommerce.CustomerModule.Core.csproj">
+      <Project>{087ebf8e-e0af-407d-bf3d-c223425a92ba}</Project>
+      <Name>VirtoCommerce.CustomerModule.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

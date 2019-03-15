@@ -185,6 +185,7 @@
     <Compile Include="..\CommonAssemblyInfo.cs">
       <Link>Properties\CommonAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Controllers\Api\OrganizationWorkflowController.cs" />
     <Compile Include="Controllers\Api\CustomerModuleController.cs" />
     <Compile Include="JsonConverters\PolymorphicMemberJsonConverter.cs" />
     <Compile Include="Model\VendorSearchResult.cs" />
@@ -195,6 +196,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\VirtoCommerce.CustomerModule.Core\VirtoCommerce.CustomerModule.Core.csproj">
+      <Project>{087ebf8e-e0af-407d-bf3d-c223425a92ba}</Project>
+      <Name>VirtoCommerce.CustomerModule.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VirtoCommerce.CustomerModule.Data\VirtoCommerce.CustomerModule.Data.csproj">
       <Project>{1e7cb134-7d2c-45ff-8eb7-3c6d474d9536}</Project>
       <Name>VirtoCommerce.CustomerModule.Data</Name>
