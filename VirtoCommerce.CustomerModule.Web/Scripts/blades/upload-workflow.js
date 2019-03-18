@@ -36,7 +36,7 @@ angular.module('virtoCommerce.customerModule')
                     headers: { Accept: 'application/json' },
                     url: 'api/platform/assets?folderUrl=OrganizationWorkflow/' + orgBlade.currentEntity.id,
                     method: 'POST',
-                    autoUpload: true,
+                    autoUpload: false,
                     removeAfterUpload: true
                 });
 
@@ -54,6 +54,7 @@ angular.module('virtoCommerce.customerModule')
 
                 uploader.onAfterAddingFile = function (item) {
                     _item = item;
+                    $scope.hasChanged = true;
                     bladeNavigationService.setError(null, blade);
                 };
 
